@@ -1,0 +1,47 @@
+#start{
+
+    #startbutton{
+        border-radius: 10px;
+        width: 24%;
+        margin-top: 10%;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: purple;
+        text-decoration: none;
+        font-size: 60pt;
+        
+        animation: button 0.3s 0.3s infinite;
+    }    
+}
+
+@keyframes button{
+    0% {border-radius: 10px;
+        width: 24%;
+        margin-top: 10%;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: purple;
+        text-decoration: none;
+        font-size: 60pt;}
+    50% {
+        border-radius: 10px;
+        width: 30%;
+        margin-top: 10%;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: rgba(177, 91, 218, 0.705);
+        text-decoration: none;
+        font-size: 80pt;
+    }
+    100%{
+        border-radius: 10px;
+        width: 24%;
+        margin-top: 10%;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: purple;
+        text-decoration: none;
+        font-size: 60pt;
+    }
+}
+

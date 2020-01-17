@@ -1,5 +1,9 @@
 import React, { Component } from 'react'
 import Photo from '../../container/photo/Photo'
+import { Link } from "react-router-dom";
+
+
+import './Main.scss';
 
 export default class Main extends Component {
     constructor(props){
@@ -43,22 +47,26 @@ export default class Main extends Component {
                         cur_index: this.state.cur_index+2,
                         win:arr}
                         );
-            }                  
+            }
     }
 
     render() {
         return (
             <div>
                 {this.state.round !== 1 && <div>
-                    {this.state.cur_photos.map((path) =><div onClick={()=>this.clickPhoto(path)}><Photo 
-                    path={path} /></div>)}
+                    <span id="round">{this.state.round} ROUND</span>
+                    {this.state.cur_photos.map((path) =><div onClick={()=>this.clickPhoto(path)}>
+                        <Photo 
+                        path={path} final={false}/></div>)}
 
                     </div>
                 }
                 {
                     this.state.round === 1 &&
                     <div>
-                        <Photo path={this.state.final} />
+                        <div id="finalment">우승은 {this.state.final.slice(0,2)}</div>
+                        <div id="final"><Photo path={this.state.final} final={true} /></div>
+                        <div><Link to="/">다시하기!</Link></div>
                     </div>
                 }
             </div>

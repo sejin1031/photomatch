@@ -8,9 +8,13 @@ export default class Photo extends Component {
             path : ''
         }
     }
+
+    ClickPhoto(){
+        
+    }
     render() {
         return (
-            <div className="photoViewer">
+            <div className={this.props.final ?"finalPhoto":"photoViewer"}>
                 <img src={require("../../img/"+(this.props.path)+".jpg")} alt={this.state.path}/>
             </div>
         )
